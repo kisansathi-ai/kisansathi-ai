@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KisanSaathi AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            🌾 KisanSaathi AI
+        </div>
+
+        <p>
+            Technology that speaks the farmer's language
+        </p>
+
+    </header>
+
+
+
+    <!-- ================= CHATBOT ================= -->
+
+    <section class="chatbot">
+
+        <h1>
+            🤖 How can I help you?
+        </h1>
+
+        <p>
+            Ask your farming question in your preferred language.
+        </p>
+
+
+        <!-- LANGUAGE SELECTION -->
+
+        <label for="language">
+            Select your language:
+        </label>
+
+        <select id="language">
+
+            <option value="english">
+                English
+            </option>
+
+            <option value="kannada">
+                ಕನ್ನಡ - Kannada
+            </option>
+
+            <option value="hindi">
+                हिन्दी - Hindi
+            </option>
+
+            <option value="tamil">
+                தமிழ் - Tamil
+            </option>
+
+            <option value="telugu">
+                తెలుగు - Telugu
+            </option>
+
+            <option value="marathi">
+                मराठी - Marathi
+            </option>
+
+            <option value="bengali">
+                বাংলা - Bengali
+            </option>
+
+            <option value="gujarati">
+                ગુજરાતી - Gujarati
+            </option>
+
+            <option value="punjabi">
+                ਪੰਜਾਬੀ - Punjabi
+            </option>
+
+        </select>
+
+
+
+        <!-- QUESTION BOX -->
+
+        <textarea
+            id="question"
+            placeholder="Type your farming question here..."
+        ></textarea>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+            <button id="voiceButton">
+                🎤 Tap to Speak
+            </button>
+
+            <button id="askButton">
+                Ask KisanSaathi
+            </button>
+
+        </div>
+
+
+
+        <!-- ANSWER -->
+
+        <div class="answer">
+
+            <h3>
+                🤖 KisanSaathi's Answer
+            </h3>
+
+            <p id="answerText">
+                Your answer will appear here.
+            </p>
+
+            <button id="speakButton">
+    🔊          Listen to Answer
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= AGRICULTURE VIDEOS ================= -->
+
+    <section class="videos">
+
+        <h2>
+            🎥 Agriculture Videos
+        </h2>
+
+        <p>
+            Learn useful farming techniques through simple videos.
+        </p>
+
+
+        <div class="video-container">
+
+
+
+            <!-- TOMATO VIDEO -->
+
+            <div
+                class="video-card"
+                onclick="openVideo('https://www.youtube.com/watch?v=nNGoTZ7fGig')"
+            >
+
+                <div class="video-placeholder">
+                    ▶
+                </div>
+
+                <h3>
+                    🌱 Tomato Crop Care
+                </h3>
+
+                <p>
+                    Learn about tomato farming and crop care.
+                </p>
+
+                <button>
+                    Watch Video
+                </button>
+
+            </div>
+
+
+
+            <!-- PEST VIDEO -->
+
+            <div
+                class="video-card"
+                onclick="openVideo('https://www.youtube.com/results?search_query=pest+management+agriculture+India')"
+            >
+
+                <div class="video-placeholder">
+                    ▶
+                </div>
+
+                <h3>
+                    🐛 Pest Management
+                </h3>
+
+                <p>
+                    Learn how to identify and manage common crop pests.
+                </p>
+
+                <button>
+                    Watch Video
+                </button>
+
+            </div>
+
+
+
+            <!-- IRRIGATION VIDEO -->
+
+            <div
+                class="video-card"
+                onclick="openVideo('https://www.youtube.com/watch?v=iFpM5sB_bzw')"
+            >
+
+                <div class="video-placeholder">
+                    ▶
+                </div>
+
+                <h3>
+                    💧 Smart Irrigation
+                </h3>
+
+                <p>
+                    Learn about irrigation and water-saving techniques.
+                </p>
+
+                <button>
+                    Watch Video
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FARMING TIP ================= -->
+
+    <section class="tip">
+
+        <h2>
+            🌱 Today's Farming Tip
+        </h2>
+
+        <p>
+            Check the soil moisture before watering your crops.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            🌾 KisanSaathi AI | Empowering Farmers, One Voice at a Time
+        </p>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

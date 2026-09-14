@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8f2;
+    color: #263326;
+}
+
+
+/* ===============================
+   HEADER
+   =============================== */
+
+header {
+    text-align: center;
+    padding: 32px 20px;
+    background: linear-gradient(135deg, #1b5e20, #43a047);
+    color: white;
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+
+/* ===============================
+   CHATBOT
+   =============================== */
+
+.chatbot {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.chatbot h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.chatbot > p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+
+/* ===============================
+   LANGUAGE
+   =============================== */
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select {
+    padding: 11px 15px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    font-size: 15px;
+}
+
+
+/* ===============================
+   TEXT AREA
+   =============================== */
+
+textarea {
+    width: 100%;
+    height: 120px;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #bbb;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #388e3c;
+}
+
+
+/* ===============================
+   BUTTONS
+   =============================== */
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 9px;
+    background: #388e3c;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1b5e20;
+    transform: translateY(-1px);
+}
+
+
+/* ===============================
+   ANSWER
+   =============================== */
+
+.answer {
+    margin-top: 25px;
+    padding: 20px;
+    background: #eef7ed;
+    border-left: 5px solid #388e3c;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.answer h3 {
+    margin-bottom: 10px;
+}
+
+#answerText {
+    line-height: 1.6;
+}
+
+
+/* ===============================
+   VIDEOS
+   =============================== */
+
+.videos {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.videos h2 {
+    margin-bottom: 10px;
+}
+
+.video-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.video-card {
+    width: 280px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: 0.2s;
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+}
+
+.video-placeholder {
+    height: 150px;
+    background: #dfe8dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    border-radius: 10px;
+}
+
+.video-card h3 {
+    margin-top: 12px;
+}
+
+.video-card p {
+    margin-top: 8px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.video-card button {
+    margin-top: 12px;
+}
+
+
+/* ===============================
+   FARMING TIP
+   =============================== */
+
+.tip {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    text-align: center;
+    background: #fff8dc;
+    border-radius: 15px;
+}
+
+.tip h2 {
+    margin-bottom: 10px;
+}
+
+
+/* ===============================
+   FOOTER
+   =============================== */
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background: #263326;
+    color: white;
+}
+
+
+/* ===============================
+   MOBILE
+   =============================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 22px 15px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .chatbot {
+        width: 92%;
+        margin: 20px auto;
+        padding: 22px 15px;
+    }
+
+    .chatbot h1 {
+        font-size: 24px;
+    }
+
+    .chatbot > p {
+        font-size: 14px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    textarea {
+        height: 110px;
+        font-size: 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    .answer {
+        padding: 15px;
+    }
+
+    .videos {
+        width: 92%;
+        margin: 25px auto;
+        padding: 10px;
+    }
+
+    .videos h2 {
+        font-size: 23px;
+    }
+
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .tip {
+        width: 92%;
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 18px 10px;
+    }
+}
