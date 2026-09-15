@@ -1,282 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>KisanSaathi AI</title>
-
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
+<header>
+    <div class="logo">🌾 KisanSaathi AI</div>
+    <p id="tagline">Technology that speaks the farmer's language</p>
 
-    <!-- ================= HEADER ================= -->
+    <button type="button" id="farmerModeButton">
+        👨‍🌾 Farmer Mode
+    </button>
+</header>
 
-    <header>
 
-        <div class="logo">
-            🌾 KisanSaathi AI
+<!-- FARMER PROFILE -->
+<section class="farmer-profile">
+
+    <h2 id="profileTitle">👨‍🌾 Farmer Profile</h2>
+
+    <p id="profileDescription">
+        Tell KisanSaathi a little about yourself.
+    </p>
+
+    <div class="profile-form">
+
+        <input
+            type="text"
+            id="farmerName"
+            placeholder="Enter your name"
+        >
+
+        <select id="cropSelect">
+
+            <option value="" id="cropPlaceholder">
+                🌱 Select your main crop
+            </option>
+
+            <option value="Tomato" id="cropTomato">🍅 Tomato</option>
+            <option value="Rice" id="cropRice">🌾 Rice</option>
+            <option value="Ragi" id="cropRagi">🌾 Ragi</option>
+            <option value="Wheat" id="cropWheat">🌾 Wheat</option>
+            <option value="Maize" id="cropMaize">🌽 Maize</option>
+            <option value="Sugarcane" id="cropSugarcane">🎋 Sugarcane</option>
+            <option value="Other" id="cropOther">🌱 Other</option>
+
+        </select>
+
+        <button type="button" id="saveProfileButton">
+            💾 Save Profile
+        </button>
+
+    </div>
+
+    <div id="profileMessage" class="profile-message"></div>
+
+</section>
+
+
+<!-- FARMER DASHBOARD -->
+<section class="farmer-dashboard" id="farmerDashboard">
+
+    <h2>
+        👨‍🌾
+        <span id="dashboardTitle">My Farming Dashboard</span>
+    </h2>
+
+    <p id="dashboardWelcome">
+        Your personal farming assistant at a glance.
+    </p>
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+            <div class="dashboard-icon">👋</div>
+
+            <h3 id="dashboardWelcomeTitle">Welcome</h3>
+
+            <p id="dashboardName">Farmer</p>
         </div>
 
-        <p>
-            Technology that speaks the farmer's language
-        </p>
 
-    </header>
+        <div class="dashboard-card">
+            <div class="dashboard-icon">🌱</div>
 
+            <h3 id="dashboardCropTitle">Main Crop</h3>
 
-
-    <!-- ================= CHATBOT ================= -->
-
-    <section class="chatbot">
-
-        <h1>
-            🤖 How can I help you?
-        </h1>
-
-        <p>
-            Ask your farming question in your preferred language.
-        </p>
+            <p id="dashboardCrop">Not selected</p>
+        </div>
 
 
-        <!-- LANGUAGE SELECTION -->
+        <div class="dashboard-card">
+            <div class="dashboard-icon">🤖</div>
 
-        <label for="language">
+            <h3 id="dashboardAssistantTitle">Assistant</h3>
+
+            <p id="dashboardAssistant">
+                Ready to help you
+            </p>
+        </div>
+
+
+        <div class="dashboard-card">
+            <div class="dashboard-icon">💡</div>
+
+            <h3 id="dashboardTipTitle">Today's Tip</h3>
+
+            <p id="dashboardTip">
+                Check the soil before watering.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-info">
+
+        <div>
+            <strong>
+                📝 <span id="lastQuestionTitle">Last Question</span>
+            </strong>
+
+            <p id="lastQuestion">
+                No question asked yet.
+            </p>
+        </div>
+
+
+        <div>
+            <strong>
+                🧠 <span id="recommendationTitle">
+                    Smart Recommendation
+                </span>
+            </strong>
+
+            <p id="dashboardRecommendation">
+                Ask a question to receive a recommendation.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CHATBOT -->
+<section class="chatbot">
+
+    <h1 id="mainTitle">
+        🤖 How can I help you?
+    </h1>
+
+    <p id="mainDescription">
+        Ask your farming question in your preferred language.
+    </p>
+
+
+    <div class="language-section">
+
+        <label for="language" id="languageLabel">
             Select your language:
         </label>
 
         <select id="language">
 
-            <option value="english">
-                English
-            </option>
-
-            <option value="kannada">
-                ಕನ್ನಡ - Kannada
-            </option>
-
-            <option value="hindi">
-                हिन्दी - Hindi
-            </option>
-
-            <option value="tamil">
-                தமிழ் - Tamil
-            </option>
-
-            <option value="telugu">
-                తెలుగు - Telugu
-            </option>
-
-            <option value="marathi">
-                मराठी - Marathi
-            </option>
-
-            <option value="bengali">
-                বাংলা - Bengali
-            </option>
-
-            <option value="gujarati">
-                ગુજરાતી - Gujarati
-            </option>
-
-            <option value="punjabi">
-                ਪੰਜਾਬੀ - Punjabi
-            </option>
+            <option value="english">English</option>
+            <option value="kannada">ಕನ್ನಡ</option>
+            <option value="hindi">हिन्दी</option>
+            <option value="tamil">தமிழ்</option>
+            <option value="telugu">తెలుగు</option>
+            <option value="marathi">मराठी</option>
+            <option value="bengali">বাংলা</option>
+            <option value="gujarati">ગુજરાતી</option>
+            <option value="punjabi">ਪੰਜਾਬੀ</option>
 
         </select>
 
+    </div>
 
 
-        <!-- QUESTION BOX -->
-
-        <textarea
-            id="question"
-            placeholder="Type your farming question here..."
-        ></textarea>
+    <textarea
+        id="question"
+        placeholder="Type your farming question here..."
+    ></textarea>
 
 
+    <div class="buttons">
 
-        <!-- BUTTONS -->
+        <button type="button" id="voiceButton">
+            🎤 Tap to Speak
+        </button>
 
-        <div class="buttons">
+        <button type="button" id="askButton">
+            Ask KisanSaathi
+        </button>
 
-            <button id="voiceButton">
-                🎤 Tap to Speak
-            </button>
+    </div>
 
-            <button id="askButton">
-                Ask KisanSaathi
-            </button>
 
+    <div class="example-box">
+
+        <p id="exampleLabel">
+            ⭐ Not sure what to ask?
+        </p>
+
+        <button type="button" id="exampleButton">
+            🌱 Try an Example
+        </button>
+
+    </div>
+
+
+    <div class="answer">
+
+        <h3 id="answerTitle">
+            🤖 KisanSaathi's Answer
+        </h3>
+
+        <p id="answerText">
+            Your answer will appear here.
+        </p>
+
+        <button type="button" id="speakButton">
+            🔊 Listen to Answer
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- SMART RECOMMENDATION -->
+<section class="smart-recommendation">
+
+    <h2 id="smartRecommendationTitle">
+        🧠 Smart Recommendation
+    </h2>
+
+    <p id="smartRecommendationDescription">
+        Get simple recommendations based on your farming question.
+    </p>
+
+    <div id="recommendationBox">
+
+        <p id="recommendationText">
+            Ask a farming question to receive recommendations.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- QUICK HELP -->
+<section class="quick-help">
+
+    <h2 id="quickHelpTitle">
+        🌱 Quick Help
+    </h2>
+
+    <p id="quickHelpDescription">
+        Choose a topic to quickly ask KisanSaathi.
+    </p>
+
+
+    <div class="quick-container">
+
+        <div
+            class="quick-card"
+            onclick="quickQuestion('crop')"
+        >
+            <div class="quick-icon">🌱</div>
+
+            <h3 id="cropHelpTitle">Crop Problem</h3>
+
+            <p id="cropHelpText">
+                Ask about crop health.
+            </p>
         </div>
 
 
+        <div
+            class="quick-card"
+            onclick="quickQuestion('pest')"
+        >
+            <div class="quick-icon">🐛</div>
 
-        <!-- ANSWER -->
+            <h3 id="pestHelpTitle">Pest Attack</h3>
 
-        <div class="answer">
+            <p id="pestHelpText">
+                Ask about insects and pests.
+            </p>
+        </div>
 
-            <h3>
-                🤖 KisanSaathi's Answer
+
+        <div
+            class="quick-card"
+            onclick="quickQuestion('water')"
+        >
+            <div class="quick-icon">💧</div>
+
+            <h3 id="waterHelpTitle">Watering</h3>
+
+            <p id="waterHelpText">
+                Get irrigation guidance.
+            </p>
+        </div>
+
+
+        <div
+            class="quick-card"
+            onclick="quickQuestion('fertilizer')"
+        >
+            <div class="quick-icon">🌾</div>
+
+            <h3 id="fertilizerHelpTitle">Fertilizer</h3>
+
+            <p id="fertilizerHelpText">
+                Learn about plant nutrients.
+            </p>
+        </div>
+
+
+        <div
+            class="quick-card"
+            onclick="quickQuestion('weather')"
+        >
+            <div class="quick-icon">🌦️</div>
+
+            <h3 id="weatherHelpTitle">Weather</h3>
+
+            <p id="weatherHelpText">
+                Get weather-related advice.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRY KISANSAATHI -->
+<section class="demo-questions">
+
+    <h2 id="demoTitle">
+        🎤 Try KisanSaathi
+    </h2>
+
+    <p id="demoDescription">
+        Tap a question and KisanSaathi will answer it automatically.
+    </p>
+
+
+    <div class="demo-question-container">
+
+        <button
+            type="button"
+            class="demo-question"
+            data-type="crop"
+        >
+            🍅 Yellow Tomato Leaves
+        </button>
+
+
+        <button
+            type="button"
+            class="demo-question"
+            data-type="pest"
+        >
+            🐛 Pest Attack
+        </button>
+
+
+        <button
+            type="button"
+            class="demo-question"
+            data-type="water"
+        >
+            💧 Watering Advice
+        </button>
+
+
+        <button
+            type="button"
+            class="demo-question"
+            data-type="fertilizer"
+        >
+            🌾 Fertilizer Advice
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- CROP IMAGE -->
+<section class="crop-image">
+
+    <h2 id="cropImageTitle">
+        📸 Crop Image Analysis
+    </h2>
+
+    <p id="cropImageDescription">
+        Upload a crop image for AI-based disease detection.
+    </p>
+
+
+    <input
+        type="file"
+        id="cropImageInput"
+        accept="image/*"
+        style="display:none;"
+    >
+
+
+    <button
+        type="button"
+        id="cropImageButton"
+    >
+        📷 Upload Crop Image
+    </button>
+
+
+    <div id="cropImageMessage"></div>
+
+</section>
+
+
+<!-- VIDEOS -->
+<section class="videos">
+
+    <h2 id="videoTitle">
+        🎥 Learn Farming Visually
+    </h2>
+
+    <p id="videoDescription">
+        Learn useful farming techniques through simple videos.
+    </p>
+
+
+    <div class="video-container">
+
+
+        <div
+            class="video-card"
+            data-video-url="https://www.youtube.com/watch?v=nNGoTZ7fGig"
+        >
+
+            <div class="video-placeholder">▶</div>
+
+            <h3 id="tomatoTitle">
+                🌱 Tomato Crop Care
             </h3>
 
-            <p id="answerText">
-                Your answer will appear here.
+            <p id="tomatoDescription">
+                Learn about tomato farming and crop care.
             </p>
 
-            <button id="speakButton">
-    🔊          Listen to Answer
+            <button type="button" id="tomatoButton">
+                Watch Video
             </button>
 
         </div>
 
-    </section>
 
+        <div
+            class="video-card"
+            data-video-url="https://www.youtube.com/results?search_query=pest+management+agriculture+India"
+        >
 
+            <div class="video-placeholder">▶</div>
 
-    <!-- ================= AGRICULTURE VIDEOS ================= -->
+            <h3 id="pestTitle">
+                🐛 Pest Management
+            </h3>
 
-    <section class="videos">
+            <p id="pestDescription">
+                Learn how to identify and manage common crop pests.
+            </p>
 
-        <h2>
-            🎥 Agriculture Videos
-        </h2>
-
-        <p>
-            Learn useful farming techniques through simple videos.
-        </p>
-
-
-        <div class="video-container">
-
-
-
-            <!-- TOMATO VIDEO -->
-
-            <div
-                class="video-card"
-                onclick="openVideo('https://www.youtube.com/watch?v=nNGoTZ7fGig')"
-            >
-
-                <div class="video-placeholder">
-                    ▶
-                </div>
-
-                <h3>
-                    🌱 Tomato Crop Care
-                </h3>
-
-                <p>
-                    Learn about tomato farming and crop care.
-                </p>
-
-                <button>
-                    Watch Video
-                </button>
-
-            </div>
-
-
-
-            <!-- PEST VIDEO -->
-
-            <div
-                class="video-card"
-                onclick="openVideo('https://www.youtube.com/results?search_query=pest+management+agriculture+India')"
-            >
-
-                <div class="video-placeholder">
-                    ▶
-                </div>
-
-                <h3>
-                    🐛 Pest Management
-                </h3>
-
-                <p>
-                    Learn how to identify and manage common crop pests.
-                </p>
-
-                <button>
-                    Watch Video
-                </button>
-
-            </div>
-
-
-
-            <!-- IRRIGATION VIDEO -->
-
-            <div
-                class="video-card"
-                onclick="openVideo('https://www.youtube.com/watch?v=iFpM5sB_bzw')"
-            >
-
-                <div class="video-placeholder">
-                    ▶
-                </div>
-
-                <h3>
-                    💧 Smart Irrigation
-                </h3>
-
-                <p>
-                    Learn about irrigation and water-saving techniques.
-                </p>
-
-                <button>
-                    Watch Video
-                </button>
-
-            </div>
-
+            <button type="button" id="pestButton">
+                Watch Video
+            </button>
 
         </div>
 
-    </section>
+
+        <div
+            class="video-card"
+            data-video-url="https://www.youtube.com/watch?v=iFpM5sB_bzw"
+        >
+
+            <div class="video-placeholder">▶</div>
+
+            <h3 id="irrigationTitle">
+                💧 Smart Irrigation
+            </h3>
+
+            <p id="irrigationDescription">
+                Learn about irrigation and water-saving techniques.
+            </p>
+
+            <button type="button" id="irrigationButton">
+                Watch Video
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
 
 
+<!-- DAILY TIP -->
+<section class="tip">
 
-    <!-- ================= FARMING TIP ================= -->
+    <h2 id="tipTitle">
+        💡 Today's Smart Farming Tip
+    </h2>
 
-    <section class="tip">
+    <p id="tipText">
+        Check the soil moisture before watering your crops.
+    </p>
 
-        <h2>
-            🌱 Today's Farming Tip
-        </h2>
-
-        <p>
-            Check the soil moisture before watering your crops.
-        </p>
-
-    </section>
+</section>
 
 
+<footer>
 
-    <!-- ================= FOOTER ================= -->
+    <p id="footerText">
+        🌾 KisanSaathi AI | Empowering Farmers, One Voice at a Time
+    </p>
 
-    <footer>
-
-        <p>
-            🌾 KisanSaathi AI | Empowering Farmers, One Voice at a Time
-        </p>
-
-    </footer>
+</footer>
 
 
-
-    <!-- JAVASCRIPT -->
-
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 
 </body>
-
 </html>

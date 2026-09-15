@@ -11,13 +11,11 @@ body {
 }
 
 
-/* ===============================
-   HEADER
-   =============================== */
+/* ================= HEADER ================= */
 
 header {
     text-align: center;
-    padding: 32px 20px;
+    padding: 30px 20px;
     background: linear-gradient(135deg, #1b5e20, #43a047);
     color: white;
 }
@@ -32,10 +30,19 @@ header p {
     font-size: 16px;
 }
 
+#farmerModeButton {
+    margin-top: 18px;
+    background: white;
+    color: #1b5e20;
+    font-weight: bold;
+}
 
-/* ===============================
-   CHATBOT
-   =============================== */
+#farmerModeButton:hover {
+    background: #e8f5e9;
+}
+
+
+/* ================= CHATBOT ================= */
 
 .chatbot {
     max-width: 850px;
@@ -57,10 +64,9 @@ header p {
     color: #666;
 }
 
-
-/* ===============================
-   LANGUAGE
-   =============================== */
+.language-section {
+    margin-bottom: 5px;
+}
 
 label {
     font-weight: bold;
@@ -73,11 +79,6 @@ select {
     border: 1px solid #aaa;
     font-size: 15px;
 }
-
-
-/* ===============================
-   TEXT AREA
-   =============================== */
 
 textarea {
     width: 100%;
@@ -96,9 +97,7 @@ textarea:focus {
 }
 
 
-/* ===============================
-   BUTTONS
-   =============================== */
+/* ================= BUTTONS ================= */
 
 .buttons {
     margin-top: 20px;
@@ -124,9 +123,26 @@ button:hover {
 }
 
 
-/* ===============================
-   ANSWER
-   =============================== */
+/* ================= EXAMPLE ================= */
+
+.example-box {
+    margin-top: 20px;
+    padding: 18px;
+    background: #f1f8e9;
+    border-radius: 12px;
+}
+
+.example-box p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#exampleButton {
+    background: #689f38;
+}
+
+
+/* ================= ANSWER ================= */
 
 .answer {
     margin-top: 25px;
@@ -145,10 +161,71 @@ button:hover {
     line-height: 1.6;
 }
 
+#speakButton {
+    margin-top: 15px;
+}
 
-/* ===============================
-   VIDEOS
-   =============================== */
+
+/* ================= QUICK HELP ================= */
+
+.quick-help {
+    max-width: 1000px;
+    margin: 45px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.quick-help h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.quick-help > p {
+    color: #666;
+}
+
+.quick-container {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.quick-card {
+    width: 175px;
+    min-height: 155px;
+    padding: 20px 15px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.quick-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 9px 22px rgba(0, 0, 0, 0.14);
+}
+
+.quick-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.quick-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.quick-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+/* ================= VIDEOS ================= */
 
 .videos {
     max-width: 1000px;
@@ -159,6 +236,7 @@ button:hover {
 
 .videos h2 {
     margin-bottom: 10px;
+    font-size: 28px;
 }
 
 .video-container {
@@ -176,11 +254,13 @@ button:hover {
     border-radius: 15px;
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
     text-align: left;
-    transition: 0.2s;
+    transition: 0.25s;
+    cursor: pointer;
 }
 
 .video-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
+    box-shadow: 0 9px 22px rgba(0, 0, 0, 0.13);
 }
 
 .video-placeholder {
@@ -208,40 +288,79 @@ button:hover {
 }
 
 
-/* ===============================
-   FARMING TIP
-   =============================== */
+/* ================= DAILY TIP ================= */
 
 .tip {
     max-width: 850px;
-    margin: 30px auto;
-    padding: 25px;
+    margin: 35px auto;
+    padding: 28px;
     text-align: center;
     background: #fff8dc;
     border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 
 .tip h2 {
     margin-bottom: 10px;
 }
 
+.tip p {
+    font-size: 16px;
+    line-height: 1.6;
+}
 
-/* ===============================
-   FOOTER
-   =============================== */
+
+/* ================= FOOTER ================= */
 
 footer {
     margin-top: 40px;
-    padding: 20px;
+    padding: 22px;
     text-align: center;
     background: #263326;
     color: white;
 }
 
 
-/* ===============================
-   MOBILE
-   =============================== */
+/* ================= FARMER MODE ================= */
+
+body.farmer-mode {
+    font-size: 19px;
+}
+
+body.farmer-mode .logo {
+    font-size: 40px;
+}
+
+body.farmer-mode .chatbot h1 {
+    font-size: 36px;
+}
+
+body.farmer-mode button {
+    font-size: 19px;
+    padding: 16px 25px;
+}
+
+body.farmer-mode select {
+    font-size: 18px;
+    padding: 14px;
+}
+
+body.farmer-mode textarea {
+    font-size: 19px;
+    height: 150px;
+}
+
+body.farmer-mode .quick-card {
+    width: 190px;
+    min-height: 175px;
+}
+
+body.farmer-mode .quick-card h3 {
+    font-size: 20px;
+}
+
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
 
@@ -294,8 +413,31 @@ footer {
         width: 100%;
     }
 
+    .example-box {
+        margin-top: 15px;
+    }
+
     .answer {
         padding: 15px;
+    }
+
+    .quick-help {
+        width: 92%;
+        margin: 25px auto;
+        padding: 10px;
+    }
+
+    .quick-help h2 {
+        font-size: 23px;
+    }
+
+    .quick-container {
+        gap: 12px;
+    }
+
+    .quick-card {
+        width: 45%;
+        min-height: 145px;
     }
 
     .videos {
@@ -326,5 +468,181 @@ footer {
     footer {
         font-size: 13px;
         padding: 18px 10px;
+    }
+}
+
+/* ================= FARMER PROFILE ================= */
+
+.farmer-profile {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.farmer-profile h2 {
+    margin-bottom: 10px;
+}
+
+.farmer-profile > p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.profile-form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.profile-form input {
+    padding: 12px 15px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.profile-form select {
+    min-width: 200px;
+}
+
+.profile-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .farmer-profile {
+        width: 92%;
+        margin: 20px auto;
+        padding: 22px 15px;
+    }
+
+    .profile-form {
+        flex-direction: column;
+    }
+
+    .profile-form input,
+    .profile-form select,
+    .profile-form button {
+        width: 100%;
+    }
+}
+
+/* ================= FARMER DASHBOARD ================= */
+
+.farmer-dashboard {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.farmer-dashboard h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.dashboard-card {
+    padding: 22px 15px;
+    background: #f1f8e9;
+    border-radius: 15px;
+    transition: 0.25s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.dashboard-card h3 {
+    margin-bottom: 8px;
+}
+
+.dashboard-card p {
+    color: #555;
+}
+
+.dashboard-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.dashboard-info > div {
+    padding: 20px;
+    background: #eef7ed;
+    border-left: 5px solid #388e3c;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.dashboard-info p {
+    margin-top: 8px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.demo-questions {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 25px;
+    text-align: center;
+}
+
+.demo-question-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.demo-question {
+    background: white;
+    color: #1b5e20;
+    border: 2px solid #388e3c;
+}
+
+.demo-question:hover {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+
+@media (max-width: 700px) {
+
+    .dashboard-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dashboard-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
     }
 }
